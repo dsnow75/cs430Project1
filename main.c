@@ -36,5 +36,10 @@ void main(int argc, char* argv[]) {
     if (!pfile){
         fprintf(stderr, "File not found.");
     }
+    //Checks for valid format of said file
+    fscanf(pfile, "%s", format);
+    if (format[0] != 'P' || (format[1] != '3' && format[1] != '6')) {
+        fprintf(stderr, "Please use a P3 or a P6 image", argv[2]);
+    }
     
 }
