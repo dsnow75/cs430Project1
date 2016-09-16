@@ -31,4 +31,10 @@ void main(int argc, char* argv[]) {
     if (argc != 4) {
         fprintf(stderr, "Please put the commands in the following format: format, source file, destination file.");
     }
+    //open file and checks if file exists
+    pfile = fopen(argv[2], "r");
+    if (!pfile){
+        fprintf(stderr, "File not found.");
+    }
     
+}
